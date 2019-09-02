@@ -2,3 +2,6 @@ baseURL = "https://faycoder.github.io/guide/"
 languageCode = "en-us"
 title = "叔叔的魔法入门手册"
 theme = "yinyang"
+
+[params]
+headTitle = "叔叔的魔法入门手册"
