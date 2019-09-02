@@ -2,6 +2,7 @@
 
 if [ "`git status -s`" ]
 then
+    git add content && git commit -m "Publishing post" && git push
     echo "The working directory is dirty. Please commit any pending changes."
     exit 1;
 fi
