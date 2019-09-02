@@ -1,5 +1,4 @@
 baseURL = "https://faycoder.github.io/guide/"
 languageCode = "en-us"
-title = "My New Hugo Site"
-theme = "ananke"
+title = "叔叔的魔法入门手册"
 theme = "yinyang"
