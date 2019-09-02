@@ -3,15 +3,26 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://faycoder.github.io/guide/posts/intro/</loc>
+    <lastmod>2019-09-01T15:52:26-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://faycoder.github.io/guide/posts/</loc>
+    <lastmod>2019-09-01T15:52:26-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://faycoder.github.io/guide/</loc>
+    <lastmod>2019-09-01T15:52:26-07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://faycoder.github.io/guide/categories/</loc>
   </url>
   
   <url>
     <loc>https://faycoder.github.io/guide/tags/</loc>
-  </url>
-  
-  <url>
-    <loc>https://faycoder.github.io/guide/</loc>
   </url>
   
 </urlset>
