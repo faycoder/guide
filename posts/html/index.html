@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Hugo 0.57.2" />
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="" />
+  <meta property="og:url" content="https://faycoder.github.io/guide/posts/html/" />
+  <link rel="canonical" href="https://faycoder.github.io/guide/posts/html/" /><script type="application/ld+json">
+  {
+      "@context" : "http://schema.org",
+      "@type" : "BlogPosting",
+      "mainEntityOfPage": {
+           "@type": "WebPage",
+           "@id": "https:\/\/faycoder.github.io\/guide\/"
+      },
+      "articleSection" : "posts",
+      "name" : "初识（二）",
+      "headline" : "初识（二）",
+      "description" : "超文本标记语言 书接上回，上次我们说到只需要【右键-查看网页源代码】就可以看到网页是怎么写的了，今天我们就要详细的解释一下里面到底写的是什么了。不过淘宝太大了，我们从一个简单的网页开始，最简单的网页就从世界上第一个网页开始吧。 地址就在 http:\/\/info.cern.ch\/hypertext\/WWW\/TheProject.html 这个网页可厉害了，它比我们两个只小一岁。没想象那么老是不是，计算机这个领域就是这样，这个领域太新了，甚至很多教科书里提到的大师们还都活着。\n也许领导已经注意到了，这个网页写的就是“达不溜达不溜达不溜”，到底www什么意思呢，我们回头再说。今天先看看这个网页的源代码到底写了什么。我把源代码稍微改了一点点贴在下面\n\x26lt;HEADER\x26gt; \x26lt;TITLE\x26gt;The World Wide Web project\x26lt;\/TITLE\x26gt; \x26lt;NEXTID N=\x26quot;55\x26quot;\x26gt; \x26lt;\/HEADER\x26gt; \x26lt;BODY\x26gt; \x26lt;H1\x26gt;World Wide Web\x26lt;\/H1\x26gt; \x26lt;!---省略了---\x26gt; \x26lt;\/BODY\x26gt;  省略了很多东西，这样我们就能看见整个框架了。我们可以观察到，有很多用尖括号括起来的东西，比如\x26lt;HEADER\x26gt;和\x26lt;TITLE\x26gt;，而且都是一对一对出现的。我们把这一对东西加上括起来的部分叫HTML element，中文翻译叫HTML元素。 那什么又是HTML呢？HTML全称超文本标记语言，是一种程序语言（严格说不是写程序的语言）。而尖括号里面的东西，叫HTML tag。\n 这里插入一个笑话，A programmer knows HTML, but he doesn\x26rsquo;t know How To Make Love\n 也许领导注意到了，我在\x26lt;TITLE\x26gt;前面加了几个空格。在HTML（和很多编程语言里），空格是没用的，只是为了让人看起来更舒服。因为\x26lt;TITLE\x26gt;被\x26lt;HEADER\x26gt;包在了里面，所以我们用几个空格把它放在右边，这样一眼可以看出谁在外面谁在里面。\n如果把这些元素的关系画出来，他们是这样的\n如果倒过来看，好像是一个树，一个树干长出两个树枝，一个树枝又长出两个小树枝。没错，这就是编程里很重要的概念，就叫做树。 后面我们会不停不停的遇到这个概念，不夸张的说，如果搞明白了各种树，基本就可以找到工作啦！\n省略的东西都有什么呢，主要就是文字了，在\x26lt;BODY\x26gt;标签里直接出现的文字，会（几乎）原样的显示在网页上。但是一般来说，我们都会把文字放在\x26lt;p\x26gt;标签里面。\n标签 \x26lt;TITLE\x26gt;还算好理解一点，\x26lt;A\x26gt;和\x26lt;P\x26gt;名字也太抽象了。它们名字很短很抽象，因为它们很常用，程序员们为了少敲几下键盘，就用了最少的字母。\n\x26lt;H1\x26gt;意思是heading，被它括起来的文字会变大。和它类似的还有\x26lt;H2\x26gt;\x26lt;H3\x26gt;\x26lt;H4\x26gt;\n`\x26lt;H1\x26gt;我是标题\x26lt;\/H1\x26gt;`  会显示成： 我是标题 \n\x26lt;P\x26gt; 意思是paragraph，被它括起来的文字会另起一行。\n``` \x26lt;p\x26gt;第一段\x26lt;\/p\x26gt;\x26lt;p\x26gt;第二段\x26lt;\/p\x26gt; ```  第一段\n第二段\n \x26lt;A\x26gt; 意思是anchor，被它括起来的文字会变成可以点的链接，链到另一个网页\n`\x26lt;a href=\x26quot;http:\/\/www.baidu.com\x26quot;\x26gt;我是链接\x26lt;\/a\x26gt;`  我是链接  注意到href=了吗，这个定义了链接指向哪个网址，而这种href=\x26quot;\x26quot;叫做attriube，除了href还有很多种其他的attribute，比如style=定义了怎么样显示这个element。",
+      "inLanguage" : "en-US",
+      "author" : "",
+      "creator" : "",
+      "publisher": "",
+      "accountablePerson" : "",
+      "copyrightHolder" : "",
+      "copyrightYear" : "2019",
+      "datePublished": "2019-09-07 13:22:16 -0700 PDT",
+      "dateModified" : "2019-09-07 13:22:16 -0700 PDT",
+      "url" : "https:\/\/faycoder.github.io\/guide\/posts\/html\/",
+      "keywords" : [  ]
+  }
+</script>
+<title>初识（二） - 叔叔的魔法入门手册</title>
+  <meta property="og:title" content="初识（二） - 叔叔的魔法入门手册" />
+  <meta property="og:type" content="article" />
+  <meta name="description" content="超文本标记语言 书接上回，上次我们说到只需要【右键-查看网页源代码】就可以看到网页是怎么写的了，今天我们就要详细的解释一下里面到底写的是什么了。不过淘宝太大了，我们从一个简单的网页开始，最简单的网页就从世界上第一个网页开始吧。 地址就在 http://info.cern.ch/hypertext/WWW/TheProject.html 这个网页可厉害了，它比我们两个只小一岁。没想象那么老是不是，计算机这个领域就是这样，这个领域太新了，甚至很多教科书里提到的大师们还都活着。
+也许领导已经注意到了，这个网页写的就是“达不溜达不溜达不溜”，到底www什么意思呢，我们回头再说。今天先看看这个网页的源代码到底写了什么。我把源代码稍微改了一点点贴在下面
+&lt;HEADER&gt; &lt;TITLE&gt;The World Wide Web project&lt;/TITLE&gt; &lt;NEXTID N=&quot;55&quot;&gt; &lt;/HEADER&gt; &lt;BODY&gt; &lt;H1&gt;World Wide Web&lt;/H1&gt; &lt;!---省略了---&gt; &lt;/BODY&gt;  省略了很多东西，这样我们就能看见整个框架了。我们可以观察到，有很多用尖括号括起来的东西，比如&lt;HEADER&gt;和&lt;TITLE&gt;，而且都是一对一对出现的。我们把这一对东西加上括起来的部分叫HTML element，中文翻译叫HTML元素。 那什么又是HTML呢？HTML全称超文本标记语言，是一种程序语言（严格说不是写程序的语言）。而尖括号里面的东西，叫HTML tag。
+ 这里插入一个笑话，A programmer knows HTML, but he doesn&rsquo;t know How To Make Love
+ 也许领导注意到了，我在&lt;TITLE&gt;前面加了几个空格。在HTML（和很多编程语言里），空格是没用的，只是为了让人看起来更舒服。因为&lt;TITLE&gt;被&lt;HEADER&gt;包在了里面，所以我们用几个空格把它放在右边，这样一眼可以看出谁在外面谁在里面。
+如果把这些元素的关系画出来，他们是这样的
+如果倒过来看，好像是一个树，一个树干长出两个树枝，一个树枝又长出两个小树枝。没错，这就是编程里很重要的概念，就叫做树。 后面我们会不停不停的遇到这个概念，不夸张的说，如果搞明白了各种树，基本就可以找到工作啦！
+省略的东西都有什么呢，主要就是文字了，在&lt;BODY&gt;标签里直接出现的文字，会（几乎）原样的显示在网页上。但是一般来说，我们都会把文字放在&lt;p&gt;标签里面。
+标签 &lt;TITLE&gt;还算好理解一点，&lt;A&gt;和&lt;P&gt;名字也太抽象了。它们名字很短很抽象，因为它们很常用，程序员们为了少敲几下键盘，就用了最少的字母。
+&lt;H1&gt;意思是heading，被它括起来的文字会变大。和它类似的还有&lt;H2&gt;&lt;H3&gt;&lt;H4&gt;
+`&lt;H1&gt;我是标题&lt;/H1&gt;`  会显示成： 我是标题 
+&lt;P&gt; 意思是paragraph，被它括起来的文字会另起一行。
+``` &lt;p&gt;第一段&lt;/p&gt;&lt;p&gt;第二段&lt;/p&gt; ```  第一段
+第二段
+ &lt;A&gt; 意思是anchor，被它括起来的文字会变成可以点的链接，链到另一个网页
+`&lt;a href=&quot;http://www.baidu.com&quot;&gt;我是链接&lt;/a&gt;`  我是链接  注意到href=了吗，这个定义了链接指向哪个网址，而这种href=&quot;&quot;叫做attriube，除了href还有很多种其他的attribute，比如style=定义了怎么样显示这个element。" />
+
+  <link rel="stylesheet" href="https://unpkg.com/flexboxgrid@6.3.1/dist/flexboxgrid.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.10.0/github-markdown.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/tomorrow.min.css" />
+  <link rel="stylesheet" href="/guide/css/index.css">
+  <link href="/guide/index.xml" rel="alternate" type="application/rss+xml" title="叔叔的魔法入门手册">
+  
+  <link href="https://fonts.googleapis.com/css?family=Arvo|Permanent+Marker" rel="stylesheet">
+  
+  <script>
+    
+
+    (function (undefined) { }).call('object' === typeof window && window || 'object' === typeof self && self || 'object' === typeof global && global || {});
+  </script>
+
+  
+</head>
+
+<body>
+  <article class="post " id="article">
+    <div class="row">
+      <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2 col-lg-6 col-lg-offset-3">
+        <div class="site-header">
+          
+<header>
+  <div class="signatures site-title">
+    <a href="/">叔叔的魔法入门手册</a>
+  </div>
+</header>
+<div class="row end-xs">
+  
+  
+</div>
+<div class="header-line"></div>
+
+        </div>
+        <header class="post-header">
+          <h1 class="post-title">初识（二）</h1>
+          
+        </header>
+
+        <div class="post-content markdown-body">
+          
+
+<h2 id="超文本标记语言">超文本标记语言</h2>
+
+<p>书接上回，上次我们说到只需要【右键-查看网页源代码】就可以看到网页是怎么写的了，今天我们就要详细的解释一下里面到底写的是什么了。不过淘宝太大了，我们从一个简单的网页开始，最简单的网页就从世界上第一个网页开始吧。
+地址就在 <a href="http://info.cern.ch/hypertext/WWW/TheProject.html">http://info.cern.ch/hypertext/WWW/TheProject.html</a> 这个网页可厉害了，它比我们两个只小一岁。没想象那么老是不是，计算机这个领域就是这样，这个领域太新了，甚至很多教科书里提到的大师们还都活着。</p>
+
+<p>也许领导已经注意到了，这个网页写的就是“达不溜达不溜达不溜”，到底www什么意思呢，我们回头再说。今天先看看这个网页的源代码到底写了什么。我把源代码稍微改了一点点贴在下面</p>
+
+<pre><code>&lt;HEADER&gt;
+    &lt;TITLE&gt;The World Wide Web project&lt;/TITLE&gt;
+    &lt;NEXTID N=&quot;55&quot;&gt;
+&lt;/HEADER&gt;
+&lt;BODY&gt;
+    &lt;H1&gt;World Wide Web&lt;/H1&gt;
+    &lt;!---省略了---&gt;
+&lt;/BODY&gt;
+</code></pre>
+
+<p>省略了很多东西，这样我们就能看见整个框架了。我们可以观察到，有很多用尖括号括起来的东西，比如<code>&lt;HEADER&gt;</code>和<code>&lt;TITLE&gt;</code>，而且都是一对一对出现的。我们把这一对东西加上括起来的部分叫<code>HTML element</code>，中文翻译叫<code>HTML元素</code>。
+那什么又是HTML呢？HTML全称超文本标记语言，是一种程序语言（严格说不是写程序的语言）。而尖括号里面的东西，叫<code>HTML tag</code>。</p>
+
+<blockquote>
+<p>这里插入一个笑话，A programmer knows HTML, but he doesn&rsquo;t know How To Make Love</p>
+</blockquote>
+
+<p>也许领导注意到了，我在<code>&lt;TITLE&gt;</code>前面加了几个空格。在HTML（和很多编程语言里），空格是没用的，只是为了让人看起来更舒服。因为<code>&lt;TITLE&gt;</code>被<code>&lt;HEADER&gt;</code>包在了里面，所以我们用几个空格把它放在右边，这样一眼可以看出谁在外面谁在里面。</p>
+
+<p>如果把这些元素的关系画出来，他们是这样的</p>
+
+<p><img src="../../img/domTree.png" alt="dom tree" /></p>
+
+<p>如果倒过来看，好像是一个树，一个树干长出两个树枝，一个树枝又长出两个小树枝。没错，这就是编程里很重要的概念，就叫做树。
+后面我们会不停不停的遇到这个概念，不夸张的说，如果搞明白了各种树，基本就可以找到工作啦！</p>
+
+<p>省略的东西都有什么呢，主要就是文字了，在<code>&lt;BODY&gt;</code>标签里直接出现的文字，会（几乎）原样的显示在网页上。但是一般来说，我们都会把文字放在<code>&lt;p&gt;</code>标签里面。</p>
+
+<h2 id="标签">标签</h2>
+
+<p><code>&lt;TITLE&gt;</code>还算好理解一点，<code>&lt;A&gt;</code>和<code>&lt;P&gt;</code>名字也太抽象了。它们名字很短很抽象，因为它们很常用，程序员们为了少敲几下键盘，就用了最少的字母。</p>
+
+<p><code>&lt;H1&gt;</code>意思是heading，被它括起来的文字会变大。和它类似的还有<code>&lt;H2&gt;</code><code>&lt;H3&gt;</code><code>&lt;H4&gt;</code></p>
+
+<pre><code>`&lt;H1&gt;我是标题&lt;/H1&gt;`
+</code></pre>
+
+<p>会显示成：
+<div id='demo' style="border: 1px solid black;margin: 10px;padding:10px;">
+<H1>我是标题</H1>
+</div></p>
+
+<p><code>&lt;P&gt;</code> 意思是paragraph，被它括起来的文字会另起一行。</p>
+
+<pre><code>```
+&lt;p&gt;第一段&lt;/p&gt;&lt;p&gt;第二段&lt;/p&gt;
+```
+</code></pre>
+
+<div id='demo2' style="border: 1px solid black;margin: 10px;padding:10px;">
+<p>第一段</p>
+<p>第二段</p>
+</div>
+
+<p><code>&lt;A&gt;</code> 意思是anchor，被它括起来的文字会变成可以点的链接，链到另一个网页</p>
+
+<pre><code>`&lt;a href=&quot;http://www.baidu.com&quot;&gt;我是链接&lt;/a&gt;`
+</code></pre>
+
+<div id='demo2' style="border: 1px solid black;margin: 10px;padding:10px;">
+<a href="http://www.baidu.com">我是链接</a>   
+</div>
+
+<p>注意到<code>href=</code>了吗，这个定义了链接指向哪个网址，而这种<code>href=&quot;&quot;</code>叫做attriube，除了href还有很多种其他的attribute，比如<code>style=</code>定义了怎么样显示这个element。</p>
+
+<h2 id="领导的第一个网页">领导的第一个网页</h2>
+
+<p>得益于很多公司提供了各种免费服务，现在在网上发布一个网页非常简单，还不花钱。而且账号我都给领导申请好了，今天这篇看完，领导就能做出第一个网页了！
+偷偷说一句，这篇文章还有给领导的一句话也是放在了同样的地方，而且我估计只需要5-6篇文章，领导就可以做一个给我写的一句话网页了~</p>
+
+<p>首先我们来登陆 <a href="http://github.com">http://github.com</a> ，这个网站是全世界程序员的facebook或者朋友圈。点击右上角的login，我已经帮领导注册好一个账号了，用户名密码私信找我要哦。</p>
+
+<p>登陆以后是这样的：</p>
+
+<p><img src="../../img/github.png" alt="github" /></p>
+
+<p>左上角显示了领导的账号里已经存在的项目，hello-world 是注册时候自动创建的，以后我们学习和别人一起写代码时候再用。
+<code>faycoder/guide</code>就是这一系列文章所在地了。而<code>faycoder/learnHTML</code>就是领导学习HTML的地方了，点进去正中间显示了已经存在的文件，我已经帮领导创建了index.html,
+点开以后是这样的:</p>
+
+<p><img src="../../img/editFile.png" alt="edit index.html" /></p>
+
+<p>点红圈圈出来的那个笔，就可以编辑了。领导可以在里面随便写一些什么东西编辑好了在最下面点击Commit changes，提交领导的修改。</p>
+
+<p>最后，赶紧去 <a href="https://faycoder.github.io/learnHTML/index.html">https://faycoder.github.io/learnHTML/index.html</a> 看看成果吧！</p>
+
+<p>领导可能注意到了，我们自己写的网页和www那个网页不太一样，这是因为那个网页太早了，现在有一些格式已经和以前不太一样了，比如所有的tag现在一般都是小写的，而当初是大写的。
+还比如以前<code>&lt;p&gt;</code>是单独存在的，而现在是成对出现的。而我们自己写的网页第一行<code>&lt;!DOCTYPE html&gt;</code>意思就是告诉浏览器，这个网页的格式是什么。</p>
+
+<p>等领导真的要写代码时候就会发现，超过一半的时间其实是在网上找例子，而学习HTML也一样。领导可以去 <a href="https://www.w3schools.com/html/html_intro.asp">https://www.w3schools.com/html/html_intro.asp</a>
+这里看一下，这里的教程是HTML标准委员会写的，所有关于HTML的东西都可以找到。</p>
+
+<h2 id="作业">作业</h2>
+
+<p>最后给领导留两个小作业</p>
+
+<ol>
+<li><p>修改我们的网页，写下领导想写的内容</p></li>
+
+<li><p>试一下<code>&lt;title&gt;</code>的意思，它会显示在哪里呢？小提示<code>&lt;title&gt;</code>标签应该在<code>&lt;head&gt;</code>标签里面，现在叫<code>&lt;head&gt;</code>了，以前叫<code>&lt;header&gt;</code></p></li>
+</ol>
+
+<p>下一篇文章，我们来讲讲怎么插入图片，还有到底什么是www。</p>
+
+        </div>
+
+        
+
+        <div class="site-footer">
+  
+  
+</div>
+
+      </div>
+    </div>
+  </article>
+
+  <script src="/guide/js/highlight.pack.js"></script>
+<script src="https://unpkg.com/quicklink@0.1.1/dist/quicklink.umd.js"></script>
+
+<script>
+  hljs.initHighlightingOnLoad();
+  
+  var posts = document.getElementById('posts-list');
+  posts && quicklink({
+    el: posts,
+    priority: true,
+  });
+</script>
+
+  
+
+</body>
+
+</html>

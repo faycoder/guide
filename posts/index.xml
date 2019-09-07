@@ -6,13 +6,37 @@
     <description>Recent content in Posts on 叔叔的魔法入门手册</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 01 Sep 2019 15:52:26 -0700</lastBuildDate>
+    <lastBuildDate>Sat, 07 Sep 2019 13:22:16 -0700</lastBuildDate>
     
 	<atom:link href="https://faycoder.github.io/guide/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Intro</title>
+      <title>初识（二）</title>
+      <link>https://faycoder.github.io/guide/posts/html/</link>
+      <pubDate>Sat, 07 Sep 2019 13:22:16 -0700</pubDate>
+      
+      <guid>https://faycoder.github.io/guide/posts/html/</guid>
+      <description>超文本标记语言 书接上回，上次我们说到只需要【右键-查看网页源代码】就可以看到网页是怎么写的了，今天我们就要详细的解释一下里面到底写的是什么了。不过淘宝太大了，我们从一个简单的网页开始，最简单的网页就从世界上第一个网页开始吧。 地址就在 http://info.cern.ch/hypertext/WWW/TheProject.html 这个网页可厉害了，它比我们两个只小一岁。没想象那么老是不是，计算机这个领域就是这样，这个领域太新了，甚至很多教科书里提到的大师们还都活着。
+也许领导已经注意到了，这个网页写的就是“达不溜达不溜达不溜”，到底www什么意思呢，我们回头再说。今天先看看这个网页的源代码到底写了什么。我把源代码稍微改了一点点贴在下面
+&amp;lt;HEADER&amp;gt; &amp;lt;TITLE&amp;gt;The World Wide Web project&amp;lt;/TITLE&amp;gt; &amp;lt;NEXTID N=&amp;quot;55&amp;quot;&amp;gt; &amp;lt;/HEADER&amp;gt; &amp;lt;BODY&amp;gt; &amp;lt;H1&amp;gt;World Wide Web&amp;lt;/H1&amp;gt; &amp;lt;!---省略了---&amp;gt; &amp;lt;/BODY&amp;gt;  省略了很多东西，这样我们就能看见整个框架了。我们可以观察到，有很多用尖括号括起来的东西，比如&amp;lt;HEADER&amp;gt;和&amp;lt;TITLE&amp;gt;，而且都是一对一对出现的。我们把这一对东西加上括起来的部分叫HTML element，中文翻译叫HTML元素。 那什么又是HTML呢？HTML全称超文本标记语言，是一种程序语言（严格说不是写程序的语言）。而尖括号里面的东西，叫HTML tag。
+ 这里插入一个笑话，A programmer knows HTML, but he doesn&amp;rsquo;t know How To Make Love
+ 也许领导注意到了，我在&amp;lt;TITLE&amp;gt;前面加了几个空格。在HTML（和很多编程语言里），空格是没用的，只是为了让人看起来更舒服。因为&amp;lt;TITLE&amp;gt;被&amp;lt;HEADER&amp;gt;包在了里面，所以我们用几个空格把它放在右边，这样一眼可以看出谁在外面谁在里面。
+如果把这些元素的关系画出来，他们是这样的
+如果倒过来看，好像是一个树，一个树干长出两个树枝，一个树枝又长出两个小树枝。没错，这就是编程里很重要的概念，就叫做树。 后面我们会不停不停的遇到这个概念，不夸张的说，如果搞明白了各种树，基本就可以找到工作啦！
+省略的东西都有什么呢，主要就是文字了，在&amp;lt;BODY&amp;gt;标签里直接出现的文字，会（几乎）原样的显示在网页上。但是一般来说，我们都会把文字放在&amp;lt;p&amp;gt;标签里面。
+标签 &amp;lt;TITLE&amp;gt;还算好理解一点，&amp;lt;A&amp;gt;和&amp;lt;P&amp;gt;名字也太抽象了。它们名字很短很抽象，因为它们很常用，程序员们为了少敲几下键盘，就用了最少的字母。
+&amp;lt;H1&amp;gt;意思是heading，被它括起来的文字会变大。和它类似的还有&amp;lt;H2&amp;gt;&amp;lt;H3&amp;gt;&amp;lt;H4&amp;gt;
+`&amp;lt;H1&amp;gt;我是标题&amp;lt;/H1&amp;gt;`  会显示成： 我是标题 
+&amp;lt;P&amp;gt; 意思是paragraph，被它括起来的文字会另起一行。
+``` &amp;lt;p&amp;gt;第一段&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;第二段&amp;lt;/p&amp;gt; ```  第一段
+第二段
+ &amp;lt;A&amp;gt; 意思是anchor，被它括起来的文字会变成可以点的链接，链到另一个网页
+`&amp;lt;a href=&amp;quot;http://www.baidu.com&amp;quot;&amp;gt;我是链接&amp;lt;/a&amp;gt;`  我是链接  注意到href=了吗，这个定义了链接指向哪个网址，而这种href=&amp;quot;&amp;quot;叫做attriube，除了href还有很多种其他的attribute，比如style=定义了怎么样显示这个element。</description>
+    </item>
+    
+    <item>
+      <title>初识（一）</title>
       <link>https://faycoder.github.io/guide/posts/intro/</link>
       <pubDate>Sun, 01 Sep 2019 15:52:26 -0700</pubDate>
       
